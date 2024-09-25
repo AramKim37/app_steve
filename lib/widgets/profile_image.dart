@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile/widgets/profile_text.dart';
 
 class ProfileImage extends StatefulWidget {
   const ProfileImage({super.key});
@@ -23,7 +24,7 @@ class _ProfileImageState extends State<ProfileImage>
     );
 
     // Opacity animation toggles between 0.0 and 1.0
-    _opacityAnimation = Tween<double>(begin: 0.7, end: 1.0).animate(
+    _opacityAnimation = Tween<double>(begin: 0.6, end: 1.0).animate(
       CurvedAnimation(
         parent: _controller,
         curve: Curves.easeInOut,
@@ -44,58 +45,47 @@ class _ProfileImageState extends State<ProfileImage>
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 150),
+            padding: EdgeInsets.only(top: 100, bottom: 20),
             child: Stack(
               alignment: Alignment.center,
               children: [
                 // Outer circle border
                 Container(
-                  width: 235,
-                  height: 235,
+                  width: 200,
+                  height: 200,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
                       color:
-                          Color.fromARGB(255, 184, 220, 244).withOpacity(0.2),
+                          Color.fromARGB(255, 138, 186, 218).withOpacity(0.2),
                       width: 2,
                     ),
                   ),
                 ),
                 Container(
-                  width: 245,
-                  height: 245,
+                  width: 200,
+                  height: 200,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 167, 212, 243)
-                        .withOpacity(0.5), // 연한 색상 추가
+                    color: Color.fromARGB(255, 193, 225, 246).withOpacity(0.5),
                   ),
                 ),
                 Container(
-                  width: 235,
-                  height: 235,
+                  width: 230,
+                  height: 230,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 183, 219, 243)
-                        .withOpacity(0.5), // 연한 색상 추가
+                    color: Color.fromARGB(255, 205, 230, 246).withOpacity(0.5),
                   ),
                 ),
-                Container(
-                  width: 220,
-                  height: 220,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 152, 191, 216)
-                        .withOpacity(0.5), // 연한 색상 추가
-                  ),
-                ),
-
                 // Inner circle border
                 Container(
-                  width: 220,
-                  height: 220,
+                  width: 160,
+                  height: 160,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
@@ -105,21 +95,19 @@ class _ProfileImageState extends State<ProfileImage>
                     ),
                   ),
                 ),
-
                 // Circular image with opacity animation
                 FadeTransition(
-                  opacity: _opacityAnimation, // Link opacity animation
+                  opacity: _opacityAnimation,
                   child: ClipOval(
                     child: Container(
-                      width: 200,
-                      height: 200,
+                      width: 150,
+                      height: 150,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: Image.asset(
                         "assets/images/me.jpeg",
-                        fit: BoxFit
-                            .cover, // Ensure the image covers the container
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -127,7 +115,7 @@ class _ProfileImageState extends State<ProfileImage>
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }

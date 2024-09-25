@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile/widgets/profile_image.dart';
+import 'package:profile/widgets/profile_text.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -45,12 +46,13 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          ProfileImage(),
-        ],
-      ),
-    );
+        backgroundColor: Colors.grey.shade200,
+        body: Stack(
+          children: [
+            Positioned.fill(
+              child: Image.asset("assets/images/me.jpeg", fit: BoxFit.cover),
+            ),
+          ],
+        ));
   }
 }

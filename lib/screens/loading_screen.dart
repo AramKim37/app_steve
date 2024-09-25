@@ -84,7 +84,7 @@ class _LoadingScreenState extends State<LoadingScreen>
                             ),
                           ),
                           child: Text(
-                            "Go to Home",
+                            "Click to Unlock",
                             style: GoogleFonts.getFont('Shrikhand'),
                           ), // 버튼 텍스트
                         ),
