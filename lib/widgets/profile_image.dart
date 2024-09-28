@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:profile/widgets/profile_text.dart';
 
 class ProfileImage extends StatefulWidget {
   const ProfileImage({super.key});
@@ -49,7 +48,7 @@ class _ProfileImageState extends State<ProfileImage>
       children: [
         Center(
           child: Container(
-            padding: EdgeInsets.only(top: 100, bottom: 20),
+            padding: const EdgeInsets.only(top: 100, bottom: 20),
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -60,8 +59,8 @@ class _ProfileImageState extends State<ProfileImage>
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color:
-                          Color.fromARGB(255, 138, 186, 218).withOpacity(0.2),
+                      color: const Color.fromARGB(255, 138, 186, 218)
+                          .withOpacity(0.2),
                       width: 2,
                     ),
                   ),
@@ -71,7 +70,8 @@ class _ProfileImageState extends State<ProfileImage>
                   height: 200,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 193, 225, 246).withOpacity(0.5),
+                    color: const Color.fromARGB(255, 193, 225, 246)
+                        .withOpacity(0.5),
                   ),
                 ),
                 Container(
@@ -79,7 +79,8 @@ class _ProfileImageState extends State<ProfileImage>
                   height: 230,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 205, 230, 246).withOpacity(0.5),
+                    color: const Color.fromARGB(255, 205, 230, 246)
+                        .withOpacity(0.5),
                   ),
                 ),
                 // Inner circle border
@@ -89,8 +90,8 @@ class _ProfileImageState extends State<ProfileImage>
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color:
-                          Color.fromARGB(255, 116, 178, 201).withOpacity(0.3),
+                      color: const Color.fromARGB(255, 116, 178, 201)
+                          .withOpacity(0.3),
                       width: 2,
                     ),
                   ),

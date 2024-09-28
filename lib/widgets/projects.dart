@@ -7,7 +7,7 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -17,7 +17,7 @@ class Projects extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white70,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.blueGrey,
                   offset: Offset(2, 2),
@@ -34,7 +34,7 @@ class Projects extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(

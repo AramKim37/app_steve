@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profile/widgets/profile_image.dart';
-import 'package:profile/widgets/profile_text.dart';
+import 'package:profile/widgets/bottom_navigation_bar.dart';
 import 'package:profile/widgets/projects.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
+  int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -44,6 +44,13 @@ class _HomeScreenState extends State<HomeScreen>
     super.dispose();
   }
 
+  // Method to handle bottom navigation bar tap
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,11 +60,18 @@ class _HomeScreenState extends State<HomeScreen>
           Positioned.fill(
             child: Image.asset("assets/images/me.jpeg", fit: BoxFit.cover),
           ),
-          Positioned.fill(
-            child: Projects(),
+          const Positioned.fill(
             top: 80,
             left: -270,
-          )
+            child: Projects(),
+          ),
+          const Positioned.fill(
+            top: 800,
+            bottom: 20,
+            left: 10,
+            right: 10,
+            child: BottomBar(),
+          ),
         ],
       ),
     );

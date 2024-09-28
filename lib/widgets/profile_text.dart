@@ -1,8 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ProfileText extends StatelessWidget {
@@ -15,7 +11,7 @@ class ProfileText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.bottomLeft,
           end: Alignment.bottomRight,
           colors: [
@@ -65,7 +61,7 @@ class ProfileText extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Text("Hello World"),
+          const Text("Hello World"),
         ],
       ),
     );

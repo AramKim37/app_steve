@@ -80,7 +80,7 @@ class _LoadingScreenState extends State<LoadingScreen>
                           onPressed: () => Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
+                              builder: (context) => const HomeScreen(),
                             ),
                           ),
                           child: Text(
@@ -90,7 +90,7 @@ class _LoadingScreenState extends State<LoadingScreen>
                         ),
                       ),
                     )
-                  : SizedBox.shrink(), // 버튼이 보이지 않을 때 공간을 차지하지 않게 설정
+                  : const SizedBox.shrink(), // 버튼이 보이지 않을 때 공간을 차지하지 않게 설정
             ),
           ],
         ),
