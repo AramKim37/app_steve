@@ -41,35 +41,74 @@ class BottomBar extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.black,
+              ClipRect(
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.grey.shade800,
+                        Colors.black,
+                      ],
+                      stops: const [0.0, 0.5],
+                    ),
+                  ),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset(
+                    "assets/images/gmail.png",
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                width: 70,
-                height: 70,
-                child: Image.asset("assets/images/call.png"),
               ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.black,
+              ClipRect(
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.grey.shade800,
+                        Colors.black,
+                      ],
+                      stops: const [0.0, 0.5],
+                    ),
+                  ),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset(
+                    "assets/images/social.png",
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                width: 70,
-                height: 70,
-                child: Image.asset("assets/images/call.png"),
               ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.black,
+              ClipRect(
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.grey.shade800,
+                        Colors.black,
+                      ],
+                      stops: const [0.0, 0.5],
+                    ),
+                  ),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset(
+                    "assets/images/linkedin.png",
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                width: 70,
-                height: 70,
-                child: Image.asset("assets/images/call.png"),
               ),
             ],
           ),

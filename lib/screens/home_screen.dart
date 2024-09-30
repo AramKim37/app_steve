@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile/widgets/bottom_navigation_bar.dart';
-import 'package:profile/widgets/projects.dart';
+import 'package:profile/widgets/about_me.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen>
           const Positioned.fill(
             top: 80,
             left: -270,
-            child: Projects(),
+            child: AboutMe(),
           ),
           const Positioned.fill(
             top: 800,
